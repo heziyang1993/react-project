@@ -1,0 +1,66 @@
+@import '../../../assets/css/main.scss';
+.login {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: $white;
+  padding: 0 rem(40);
+}
+.login-logo {
+  position: relative;
+  height: rem(222);
+  img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: rem(365);
+    height: rem(102);
+  }
+}
+.login-input {
+  position: relative;
+  height: rem(92);
+  input {
+    width: 100%;
+    height: 100%;
+    line-height: 100%;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: rem(32);
+    &::placeholder {
+      color: $grey;
+      font-size: rem(32);
+    }
+  }
+  .code-button {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    text-align: center;
+    padding: 0 rem(24);
+    font-size: rem(22);
+    line-height: 2;
+    &.z-1px-all::after {
+      border-radius: rem(100);
+    }
+  }
+}
+.login-button {
+  display: block;
+  width: 100%;
+  height: rem(90);
+  background: #FCA800;
+  border-radius: rem(100);
+  color: #ffffff;
+  font-size: rem(32);
+  line-height: rem(90);
+  margin-top: rem(60);
+  text-align: center;
+  &.disable {
+    background: #e6e6e6;
+    color: #999999;
+  }
+}

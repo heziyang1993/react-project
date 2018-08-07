@@ -1,0 +1,11 @@
+@import '../../../assets/css/main.scss';
+.z-select {
+  padding-left: rem(40);
+  span {
+    display: block;
+    font-size: rem(50)
+  }
+  .active {
+    color: red
+  }
+}

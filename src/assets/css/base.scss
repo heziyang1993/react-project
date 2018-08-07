@@ -1,0 +1,26 @@
+@import './var.scss';
+@import './reset.scss';
+// rem 单位换算：定为 75px 只是方便运算，750px-75px、640-64px、1080px-108px，如此类推
+$vm_fontsize: 75;
+$vm_design: 750;
+
+@function rem($px, $fontsize: $vm_fontsize) {
+     @return ($px / 2 / $fontsize) * 1rem;
+}
+// 根元素大小使用 vw 单位
+
+
+// 等比例图片
+@mixin ratioImg($h, $w) {
+  position: relative;
+  padding-top: percentage($h/$w); // 使用padding-top
+  height: 0;
+  overflow: hidden;
+  img {
+      width: 100%;
+      height: auto;
+      position: absolute;
+      left: 0;
+      top: 0;
+  }
+}

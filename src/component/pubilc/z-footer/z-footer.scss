@@ -1,0 +1,28 @@
+@import '../../../assets/css/main.scss';
+.z-footer {
+  display: flex;
+  background: $white;
+  width: 100%;
+}
+.z-footer-box {
+  flex: 1;
+}
+.z-footer-icon {
+  text-align: center;
+  padding-top: rem(10);
+  .iconfont {
+    color: $text-color !important;
+    font-size: rem(44) !important;
+  }
+  .iconfont.active {
+    color: $orange !important;
+  }
+}
+.z-footer-icon-name {
+  font-size: rem(16);
+  text-align: center;
+  padding-bottom: rem(10);
+  &.active {
+    color: $orange;
+  }
+}

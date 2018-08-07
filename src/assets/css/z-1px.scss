@@ -1,0 +1,51 @@
+@import './var.scss';
+.z-1px {
+  &,
+  &-t,
+  &-l,
+  &-r,
+  &-b,
+  &-t-b,
+  &-all {
+    position: relative;
+
+    &::after {
+      content: '';
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  width: 200%;
+		  height: 200%;
+		  transform: scale(.5);
+		  transform-origin: 0 0;
+		  pointer-events: none;
+		  box-sizing: border-box;
+		  border: 0 solid #cccccc;
+		  z-index: 1;
+    }
+  }
+
+  &-t::after {
+    border-top-width: 1px;
+  }
+
+  &-l::after {
+    border-left-width: 1px;
+  }
+
+  &-r::after {
+    border-right-width: 1px;
+  }
+
+  &-b::after {
+    border-bottom-width: 1px;
+  }
+
+  &-t-b::after {
+    border-width: 1px 0;
+  }
+
+  &-all::after {
+    border: 1px solid #999;
+  }
+}
